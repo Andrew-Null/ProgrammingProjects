@@ -4,7 +4,7 @@ cd ProgrammingProjects
 eval 'ssh-agent -s'
 
 Cuda='date -u'
-
+echo $Cuda
 
 git init
 git add ArduinoProjects/
