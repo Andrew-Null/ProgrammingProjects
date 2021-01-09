@@ -19,7 +19,7 @@ git add PythonProjects/
 git add BashProjects/
 git add CProjects/
 git add PolyProjects/
-git commit -m "Testing Commit Script"
+git commit -m "Scripted Commit"
 git branch -M main
 git remote add set-url origin git@github.com:ScorpionKing819/ProgrammingProjects.git
 git push --set-upstream origin main
