@@ -1,8 +1,7 @@
 cd
 cd ProgrammingProjects
-CuDa='date'
 
-eval 'ssh-gent -s'
+eval 'ssh-agent -s'
 
 git init
 git add ArduinoProjects/
@@ -13,7 +12,7 @@ git add PythonProjects/
 git add BashProjects/
 git add CProjects/
 git add PolyProjects/
-git commit -m $CuDa
+git commit -m date -u
 git branch -M main
-git remote add origin git@github.com:ScorpionKing819/ProgrammingProjects.git
-git push --force origin main
+git remote add set-url origin git@github.com:ScorpionKing819/ProgrammingProjects.git
+git push --set-upstream origin main

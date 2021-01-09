@@ -1,6 +1,6 @@
 cd
 cd ProgrammingProjects
-CuDa='date'
+CuDa= date -u
 
 eval 'ssh-gent -s'
 
@@ -15,5 +15,5 @@ git add CProjects/
 git add PolyProjects/
 git commit -m $CuDa
 git branch -M main
-git remote add origin https://github.com/ScorpionKing819/ProgrammingProjects.git
-git push --force origin main
+git remote add set-url origin git@github.com:ScorpionKing819/ProgrammingProjects.git
+git push --set-upstream origin main
