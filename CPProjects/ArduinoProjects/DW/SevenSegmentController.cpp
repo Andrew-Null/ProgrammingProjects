@@ -6,33 +6,33 @@ class SD7 //7 segment display
 
   public:
   // con-, and decon-, -structors
-  SD7(int (&pins)[8]);
-  ~SD7();
+	  SD7(int (&pins)[8]);
+	  ~SD7();
 
-  //numbers
-  void uno();  //b, c
-  void dos(); //a, b, g, e, d, 
-  void tres(); //a, b, g, c, d
-  void cuatro(); //f, g, b, c
-  void cinco(); //a, f, g, c, d
-  void seis(); //a, f, g, c, d, e
-  void siete(); //a, b, c
-  void ocho(); //all
-  void nueve(); //a, f, g, b, c
-  void cero(); //a, b, c, d, e, f
+	  //numbers
+	  void uno();  //b, c
+	  void dos(); //a, b, g, e, d, 
+	  void tres(); //a, b, g, c, d
+	  void cuatro(); //f, g, b, c
+	  void cinco(); //a, f, g, c, d
+	  void seis(); //a, f, g, c, d, e
+	  void siete(); //a, b, c
+	  void ocho(); //all
+	  void nueve(); //a, f, g, b, c
+	  void cero(); //a, b, c, d, e, f
 
   
   private:
-  //short hand functions
-  void clear();
-  void lon(int pin); //light on
-  void loff(int pin); //light off
-  int dly = 250; //delay
+  	//short hand functions
+  	void clear();
+  	void lon(int pin); //light on
+  	void loff(int pin); //light off
+  	int dly = 250; //delay
   
   // pins
   //com 3 and 8 are gorund pins
-  int g, f, /*com8,*/ a, b;
-  int e, d, /*com3,*/ c, dp;
+  	int g, f, /*com8,*/ a, b;
+  	int e, d, /*com3,*/ c, dp;
 
 };
 
