@@ -1,7 +1,14 @@
-x = 0
-y = 0
-while (y < 100):
-	y += 1
-	while (x < 100):
-		x += 1
-		print('x: ' + str(x) + ' y: ' + str(y) + ' y**x:' + str(y**x))
+base = 0
+power = 0
+import time
+
+while (True):
+	
+	base += 1
+	power = 0
+
+	while (power <= base):
+	
+		power += 1
+		print('base: ' + str(base) + ' power: ' + str(power) + ' base**power:' + str(base**power))
+		time.sleep(1)

@@ -1,20 +1,20 @@
 #!/bin/bash
 
-cd
-cd ProgrammingProjects
+cd &> debug.txt
+cd ProgrammingProjects &>> debug.txt
 
-eval 'ssh-agent -s'
+eval 'ssh-agent -s' &>> debug.txt
 
-git init
-git add CPProjects/
-git add CProjects/
-git add JavaProjects/
-git add PythonProjects/
-git add BashProjects/
-git add CProjects/
-git add PolyProjects/
-git add misc
-git commit -m "scripted commit"
-git branch -M main
-git remote add set-url origin git@github.com:ScorpionKing819/ProgrammingProjects.git
-git push --set-upstream origin main
+git init &>> debug.txt
+git add CPProjects/ &>> debug.txt
+git add CProjects/ &>> debug.txt
+git add JavaProjects/ &>> debug.txt
+git add PythonProjects/ &>> debug.txt
+git add BashProjects/ &>> debug.txt
+git add CProjects/ &>> debug.txt
+git add PolyProjects/ &>> debug.txt
+git add misc &>> debug.txt
+git commit -m "testing commit script" &>> debug.txt
+git branch -M main &>> debug.txt
+git remote add set-url origin git@github.com:ScorpionKing819/ProgrammingProjects.git &>> debug.txt
+git push --set-upstream origin main &>> debug.txt
