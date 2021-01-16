@@ -1,4 +1,4 @@
-#include "Arduino.h"
+#define ARDUINO_H
 #include "DW.h"
 
 class SD7 //7 segment display

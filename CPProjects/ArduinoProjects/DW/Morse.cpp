@@ -1,4 +1,4 @@
-#include "Arduino.h"
+#define ARDUINO_H
 #include "DW.h"
 
 class Morse
@@ -14,7 +14,7 @@ class Morse
   //int leng;    
 
   public:
-  void OWB(); //out of word break
+  void OWB(); //out of word break / space
   void IWB(); //in word break
   
   
@@ -28,7 +28,7 @@ class Morse
   void C();
   void D();
   void E();
-  void cF();
+  void cF(); //class f since F() is an arduino function 
   void G();
   void H();
   void I();
