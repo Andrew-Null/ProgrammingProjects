@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd &> debug.txt
-cd ProgrammingProjects #&>> debug.txt
+cd ProgrammingProjects &>> debug.txt
 
-eval 'ssh-agent -s' #&>> debug.txt
+eval 'ssh-agent -s' &>> debug.txt
 
 git init #&>> debug.txt
 git add CPProjects/ #&>> debug.txt
