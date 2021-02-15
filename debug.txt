@@ -67,3 +67,19 @@ usage: git remote add [<options>] <name> <url>
 
 error: src refspec main does not match any
 error: failed to push some refs to 'https://github.com/ScorpionKing819/ProgrammingProjects.git'
+SSH_AUTH_SOCK=/tmp/ssh-M0eRRFppbQdU/agent.812443; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=812444; export SSH_AGENT_PID;
+echo Agent pid 812444;
+Reinitialized existing Git repository in /home/scorpion/ProgrammingProjects/.git/
+fatal: Invalid branch name: 'HEAD'
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
