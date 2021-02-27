@@ -1,7 +1,7 @@
-#!/bin/bash
 
 time= date
 echo $time
+lc= 360
 
 for ((var = 0 ; var < 360 ; var++))
 do
@@ -14,7 +14,7 @@ do
 	elif (( $BatPer > $LightLI | bc)); then
 		light -A .2
 	fi
-	progress=$var/1920
+	progress=$var/360
 	echo $progress
 	sleep 15s
 	#var=$(( $var + 1))
