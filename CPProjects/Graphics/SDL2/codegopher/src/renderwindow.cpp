@@ -22,7 +22,7 @@ RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h)
 SDL_Texture* RenderWindow::LoadTexture(const char* p_FilePath)
 {
 	SDL_Texture* texture = NULL
-	texture = IMGLoadTexture(renderer, p_FilePath)
+	texture = IMGLoadTexture(renderer, p_FilePath)x
 }
 
 void RenderWindow::CleanUp()

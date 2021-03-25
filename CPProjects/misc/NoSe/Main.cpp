@@ -1,0 +1,5 @@
+#include "CYS.h"
+int main()
+{
+	return 0;
+}
