@@ -25,8 +25,7 @@ def Verify(primes):
 					primes.pop(pi)
 					print(str(primes[pi]) + ' :is not prime')
 					print(str(primes[pi]) + ' :is being dropped')
-	return primes			
-				
+	return primes
 
 
 

@@ -1,0 +1,133 @@
+#![allow(non_snake_case)]
+#![allow(dead_code)]
+
+type PrimeMax = num_bigint::BigUint;
+
+static DEFAULTS: [u8; 7] = [3, 5, 7, 11, 13, 17, 19];
+static CS: [PrimeMax; 4] = [PrimeMax::from(0 as u8), PrimeMax::from(1 as u8), PrimeMax::from(2 as u8), PrimeMax::from(3 as u8)]; //CS - ConstantS
+
+const THREADS: u8 = 4;
+const UT: u8 = THREADS - 2;
+
+mod Sieve
+{
+	pub mod Checks
+	{
+		use crate::CS as CS;
+		use super::super::PrimeMax as PrimeMax;
+	  #[allow(unused_parens)]
+	  pub fn Odd(num: PrimeMax) -> bool
+	  {
+	    ((PrimeMax::from(num) & CS[1]) == CS[1])
+	  }
+
+	  pub fn Quick(num: PrimeMax, PV: &mut Vec<PrimeMax>)	//PV - prime vector
+	  {
+	    if Odd(num)
+	    {
+	      let mut Factorable = false;
+
+	      for default in crate::DEFAULTS
+	      {
+
+          if num % (PrimeMax::from(default)) == CS[0]
+          {
+            Factorable = true;
+            break;
+          }
+
+	      }
+
+	      if Factorable == false 
+	      {
+
+					for prime in PV.iter()
+					{
+						if num % *prime == CS[0]
+						{
+							Factorable = true;
+							break;
+						}
+					}
+	      }
+
+	      if Factorable == false
+	      {
+	        &PV.push(num);
+	      }
+	    }
+	  }
+
+	  pub fn Thorough(num: PrimeMax) -> bool
+	  {
+			let mut Factorable = !Odd(num);
+			let mut counter = CS[3];
+			while counter < num && Factorable == false
+			{
+				Factorable = (num % counter) == CS[0];
+
+				counter += (PrimeMax::from(Odd(counter) as u8)) + CS[1];
+			}
+
+			Factorable
+		}
+
+		pub fn Verify(PV: &mut Vec<PrimeMax>)
+		{
+			println!("Verifying");
+			{
+				&PV.retain(|&x| (Odd(x)) || (x != PrimeMax::from(1 as u32)));
+			}
+
+			let mut FI = 0;
+			let mut FIB = PrimeMax::from(FI);
+			println!("{:?}", PV);
+			while FIB <= PrimeMax::from(PV.len())
+			{
+				FIB = PrimeMax::from(FI);
+
+				if FIB > (PrimeMax::from(PV.len()) - CS[1])
+				{
+					println!("breaking: {}", FI);
+					break;
+				}
+
+				let temp = {&mut PV[FI]};
+				println!("temp: {}, FI: {}", temp, FI);
+			  PV.retain(|&x| ((x < *temp) || (x == *temp) || (x % *temp != CS[0])));
+				//println!("hello {:?}: {} \n", PV, *temp);
+				FI += 1;
+			}
+
+			for default in crate::DEFAULTS
+			{
+				PV.retain(|&x| x != (PrimeMax::from(default)));
+			}
+		}
+	}
+
+	mod FileIO
+	{
+
+	}
+
+	fn Sieve()
+	{
+
+	}
+
+}
+#[allow(unused_variables)]
+fn main()
+{
+	
+	let mut Primes: Vec<PrimeMax> = Vec::new();
+	for FV in 2..8000
+	{
+		Primes.push(PrimeMax::from(FV as u32));
+	}
+	//println!("{:?} {}", Primes, Primes.len());
+	Sieve::Checks::Verify(&mut Primes);
+	//println!("{:?}", Primes);
+
+}

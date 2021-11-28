@@ -10,9 +10,9 @@ do
 	LightLI=${LightLF%.*}
 	echo $LightL
 	if (( $BatPer <= $LightLI | bc)); then
-		light -S $BatPer
+		sudo light -S $BatPer
 	elif (( $BatPer > $LightLI | bc)); then
-		light -A .2
+		sudo light -A .2
 	fi
 	progress=$var/360
 	echo $progress
