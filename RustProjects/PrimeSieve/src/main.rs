@@ -122,7 +122,7 @@ fn main()
 {
 	
 	let mut Primes: Vec<u128> = Vec::new();
-	for FV in 2..2_u128.pow(4)
+	for FV in 2..2_u128.pow(127)
 	{
 		Primes.push(FV);
 	}

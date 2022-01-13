@@ -1,0 +1,1 @@
+/home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/AutoPilot/target/debug/AutoPilot: /home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/AutoPilot/src/main.rs

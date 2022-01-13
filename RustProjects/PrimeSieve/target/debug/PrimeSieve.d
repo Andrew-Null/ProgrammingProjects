@@ -1,0 +1,1 @@
+/home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/PrimeSieve/target/debug/PrimeSieve: /home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/PrimeSieve/src/main.rs
