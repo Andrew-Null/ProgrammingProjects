@@ -95,6 +95,18 @@ pub fn FibMemoStatic(index: u128) -> u128
 	}
 }
 
+/*fn FibAsync(index: u128) -> dyn Future
+{
+	if index <= 2 {return 1}
+	let one;
+	let two;
+	async move{
+		two = FibAsync(index - 2).await;
+		one = FibAsync(index - 1).await;
+	}
+	return two + one
+}*/
+
 mod Memo
 {
 	pub fn Memoization(Ary: &mut Vec<Option<u128>>, index: u128) -> u128

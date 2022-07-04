@@ -1,0 +1,1 @@
+/home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/Testing/target/debug/Testing: /home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/Testing/src/main.rs

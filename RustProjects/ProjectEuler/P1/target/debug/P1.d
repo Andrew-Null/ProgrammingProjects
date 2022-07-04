@@ -1,0 +1,1 @@
+/home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/ProjectEuler/P1/target/debug/P1: /home/scorpion/Misc/Programming/Repositories/ProgrammingProjects/RustProjects/ProjectEuler/P1/src/main.rs
