@@ -1,3 +1,4 @@
+// inspiratio: https://www.youtube.com/watch?v=X_DdGRjtwAo
 use rand::Rng;
 
 #[derive(Copy, Clone)]
@@ -18,6 +19,9 @@ fn SpawnThread(id: usize) -> OJH {
         let mut total: usize = 0;
         for _ in 0..Constants::Rolls as usize {
             let (one, two): (u8, u8) = (gen.gen_range(1..Constants::Sides as u8 + 1), gen.gen_range(1..Constants::Sides as u8 + 1));
+            //if id == 0 {
+            //    println!("({}, {})", one, two);
+            //}
             total += {
                 if one > two {one} else {two}
             } as usize;
