@@ -18,7 +18,7 @@ fn SpawnThread(id: usize) -> OJH {
         let mut gen = rand::thread_rng();
         let mut total: usize = 0;
         for _ in 0..Constants::Rolls as usize {
-            let (one, two): (u8, u8) = (gen.gen_range(1..Constants::Sides as u8 + 1), gen.gen_range(1..Constants::Sides as u8 + 1));
+            let (one, two): (u8, u8) = (gen.gen_range(1..Constants::Sides as u8), gen.gen_range(1..=Constants::Sides as u8));
             //if id == 0 {
             //    println!("({}, {})", one, two);
             //}
